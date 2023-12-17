@@ -1,30 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   printf.h                                           :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mboumlik <mboumlik@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/15 21:31:23 by mboumlik          #+#    #+#             */
-/*   Updated: 2023/12/15 21:31:49 by mboumlik         ###   ########.fr       */
+/*   Created: 2023/12/17 10:07:20 by mboumlik          #+#    #+#             */
+/*   Updated: 2023/12/17 10:18:58 by mboumlik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ft_printf_h
-# define ft_printf_h
+#include "ft_printf.h"
 
-#include <unistd.h>
-#include <stdio.h>
-#include <string.h>
-#include <stdarg.h>
+int ft_strchr(const char *s, int c)
+{
+	int	i;
 
-int ft_putchar(int c);
-int ft_putstr(char *str);
-int	ft_putnbr(long int n);
-int	ft_posputnbr(unsigned int n);
-int	ft_putnbr_base(unsigned long nbr, char *base);
-int	ft_strlen(const char *str);	
-
-#endif
-
-
+	i = 0;
+	
+	while (s[i])
+	{
+		if (s[i] == (char)c)
+			return (1);
+		i++;
+	}
+	if (s[i] == (char)c)
+		return (1);
+	return (0);
+}

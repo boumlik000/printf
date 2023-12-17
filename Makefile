@@ -6,21 +6,24 @@
 #    By: mboumlik <mboumlik@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/11 21:18:03 by mboumlik          #+#    #+#              #
-#    Updated: 2023/12/14 14:08:00 by mboumlik         ###   ########.fr        #
+#    Updated: 2023/12/17 10:24:49 by mboumlik         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = printf.a
+NAME = libftprintf.a
 CC = cc
 CFLAGS = -Wall -Wextra  -Werror 
 AR = ar -rc
 
-SRC = ft_putchar.c \
+SRC = 	ft_printf.c\
+		ft_putchar.c \
 		ft_putstr.c\
-		ft_putnbr.c
+		ft_putnbr.c\
+		ft_strlen.c\
+		ft_putnbr_base.c\
+		ft_posputnbr.c\
+		ft_strchr.c
 
-
-             
 OBJ = $(SRC:.c=.o)
 
 all: $(NAME)

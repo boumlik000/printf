@@ -6,22 +6,22 @@
 /*   By: mboumlik <mboumlik@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 21:31:10 by mboumlik          #+#    #+#             */
-/*   Updated: 2023/12/15 21:41:08 by mboumlik         ###   ########.fr       */
+/*   Updated: 2023/12/17 10:19:00 by mboumlik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
 int	ft_putnbr_base(unsigned long nbr, char *base)
 {
-	int				count;
+	int				len;
 	unsigned long	bs;
 
-	count = 0;
+	len = 0;
 	bs = ft_strlen(base);
 	if (nbr >= bs)
-		count += ft_putnbr_base(nbr / bs, base);
+		len += ft_putnbr_base(nbr / bs, base);
         
-	count += ft_putchar(base[nbr % bs]);
-	return (count);
+	len += ft_putchar(base[nbr % bs]);
+	return (len);
 }

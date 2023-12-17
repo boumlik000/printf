@@ -6,11 +6,11 @@
 /*   By: mboumlik <mboumlik@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 21:31:02 by mboumlik          #+#    #+#             */
-/*   Updated: 2023/12/15 21:31:03 by mboumlik         ###   ########.fr       */
+/*   Updated: 2023/12/17 10:18:56 by mboumlik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
 int	ft_strlen(const char *str)
 {
@@ -20,7 +20,4 @@ int	ft_strlen(const char *str)
 	while (str[i] != '\0')
 		i++;
 	return (i);
-}
-int main (){
-	printf("%d,%d,%d,%d,%d,%d,%d\n",i,j,k,h,f,d,s);
 }

@@ -6,11 +6,11 @@
 /*   By: mboumlik <mboumlik@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 21:31:05 by mboumlik          #+#    #+#             */
-/*   Updated: 2023/12/15 21:31:06 by mboumlik         ###   ########.fr       */
+/*   Updated: 2023/12/17 10:18:54 by mboumlik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
 int	ft_posputnbr(unsigned int n)
 {

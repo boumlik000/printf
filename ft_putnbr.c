@@ -6,11 +6,11 @@
 /*   By: mboumlik <mboumlik@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 21:31:14 by mboumlik          #+#    #+#             */
-/*   Updated: 2023/12/15 21:31:16 by mboumlik         ###   ########.fr       */
+/*   Updated: 2023/12/17 10:19:03 by mboumlik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
 int	ft_putnbr(long int n)
 {
@@ -26,7 +26,7 @@ int	ft_putnbr(long int n)
 		n *= -1;
         len++;
 	}
-	if (n )
+	if (n >10)
 	{
 		len += ft_putnbr(n / 10);
 		len += ft_putchar((n % 10 )+ 48);
