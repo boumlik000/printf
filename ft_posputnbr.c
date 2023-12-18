@@ -6,7 +6,7 @@
 /*   By: mboumlik <mboumlik@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 21:31:05 by mboumlik          #+#    #+#             */
-/*   Updated: 2023/12/17 10:18:54 by mboumlik         ###   ########.fr       */
+/*   Updated: 2023/12/18 21:41:27 by mboumlik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,15 @@
 
 int	ft_posputnbr(unsigned int n)
 {
-    int len = 0;
-    
+	int	len;
+
+	len = 0;
 	if (n >= 10)
 	{
-		len += ft_posputnbr(n / 10);
-		len += ft_posputnbr(n % 10);
+		len = len + ft_posputnbr(n / 10);
+		len = len + ft_putchar((n % 10) + 48);
 	}
 	else
-    {
-		ft_putchar(n + 48);
-        len++;
-    }
-    return len;
+		len = len + ft_putchar(n + 48);
+	return (len);
 }
-

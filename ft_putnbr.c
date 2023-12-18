@@ -6,35 +6,30 @@
 /*   By: mboumlik <mboumlik@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/15 21:31:14 by mboumlik          #+#    #+#             */
-/*   Updated: 2023/12/17 10:19:03 by mboumlik         ###   ########.fr       */
+/*   Updated: 2023/12/18 21:24:29 by mboumlik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_putnbr(long int n)
+int	ft_putnbr(int n)
 {
-    int len = 0;
-	if (n == -2147483648)
+	int		len;
+	long	nb;
+
+	len = 0;
+	nb = n;
+	if (nb < 0)
 	{
-		write(1, "-2147483648", 11);
-		return 11;
+		len = len + ft_putchar('-');
+		nb = nb * -1;
 	}
-	if (n < 0)
+	if (nb >= 10)
 	{
-		ft_putchar('-');
-		n *= -1;
-        len++;
-	}
-	if (n >10)
-	{
-		len += ft_putnbr(n / 10);
-		len += ft_putchar((n % 10 )+ 48);
+		len = len + ft_putnbr(nb / 10);
+		len = len + ft_putchar((nb % 10) + 48);
 	}
 	else
-    {
-		ft_putchar(n + 48);
-        len++;
-    }
-    return len;
+		len = len + ft_putchar(nb + 48);
+	return (len);
 }

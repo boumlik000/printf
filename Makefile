@@ -6,7 +6,7 @@
 #    By: mboumlik <mboumlik@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/11 21:18:03 by mboumlik          #+#    #+#              #
-#    Updated: 2023/12/17 10:24:49 by mboumlik         ###   ########.fr        #
+#    Updated: 2023/12/18 21:38:12 by mboumlik         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,5 +39,4 @@ clean:
 
 fclean: clean
 	rm -f $(NAME) 
-
 re: fclean all
